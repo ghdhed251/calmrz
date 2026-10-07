@@ -1,0 +1,2153 @@
+{
+  "_readme": "Edit this file, then reload the page. days: date -> {dn, cycle, tag, holiday, special, half, summer}. Cycle on days with dn is recalculated (a new cycle starts each Day 1). events: {start, end, text, spanAll?}. spanAll paints every day in the range, including weekends; otherwise only school days. timetable keys are cycle days 1-10. peDays are cycle-day numbers that show the PE icon; peDates are extra dates (Sports Day). uniform dates switch the jacket/shirt icon. Serve this folder so the page can fetch the JSON (python3 -m http.server). school-calendar-data.js is only a fallback for opening the HTML file directly.",
+  "months": [
+    [
+      2026,
+      9
+    ],
+    [
+      2026,
+      10
+    ],
+    [
+      2026,
+      11
+    ],
+    [
+      2026,
+      12
+    ],
+    [
+      2027,
+      1
+    ],
+    [
+      2027,
+      2
+    ],
+    [
+      2027,
+      3
+    ],
+    [
+      2027,
+      4
+    ],
+    [
+      2027,
+      5
+    ],
+    [
+      2027,
+      6
+    ],
+    [
+      2027,
+      7
+    ],
+    [
+      2027,
+      8
+    ]
+  ],
+  "marks": {
+    "term": [
+      "T1",
+      "T2",
+      "E1",
+      "E2"
+    ],
+    "orange": [
+      "M",
+      "TSA",
+      "PC"
+    ]
+  },
+  "peDays": [
+    1,
+    6,
+    9
+  ],
+  "peDates": [
+    "2026-10-28",
+    "2026-10-29"
+  ],
+  "rsjDays": {
+    "2": "中",
+    "7": "E"
+  },
+  "asa": {
+    "recess": "15:25–15:45",
+    "activity": "15:45–17:45",
+    "noAsaTags": [
+      "SP",
+      "SDY",
+      "SG",
+      "SW",
+      "PI",
+      "T1",
+      "T2",
+      "E1",
+      "E2"
+    ]
+  },
+  "uniform": {
+    "2026-11-16": "winter",
+    "2027-04-12": "summer"
+  },
+  "subjects": {
+    "MAT": "Maths",
+    "ENG": "English",
+    "CHI": "Chinese",
+    "IS": "Integrated Sci.",
+    "GEO": "Geography",
+    "PE": "PE",
+    "CHS": "Chinese History",
+    "CES": "Citizenship",
+    "HIS": "History",
+    "CL": "Computer Lit.",
+    "MUS": "Music",
+    "VA": "Visual Arts",
+    "HE": "Home Econ.",
+    "STEAM": "STEAM",
+    "LE": "Live lesson",
+    "RSJ-Chi": "Reading (Chi)",
+    "RSJ-Eng": "Reading (Eng)",
+    "BADM": "Badminton",
+    "ASA": "After School Activity"
+  },
+  "timetable": {
+    "1": [
+      {
+        "t": "08:10–08:30",
+        "break": "Class Period"
+      },
+      {
+        "t": "08:30–09:25",
+        "s": "MAT",
+        "teacher": "TseCH",
+        "room": "Rm202"
+      },
+      {
+        "t": "09:25–10:20",
+        "s": "ENG",
+        "teacher": "ChongYT",
+        "room": "Rm202"
+      },
+      {
+        "t": "10:20–10:40",
+        "break": "Recess"
+      },
+      {
+        "t": "10:40–11:35",
+        "s": "CHI",
+        "teacher": "LawST",
+        "room": "Rm202"
+      },
+      {
+        "t": "11:35–12:30",
+        "s": "IS",
+        "teacher": "YipWS",
+        "room": "Rm202"
+      },
+      {
+        "t": "12:30–13:35",
+        "break": "Lunch"
+      },
+      {
+        "t": "13:35–14:30",
+        "s": "GEO",
+        "teacher": "KwongTW",
+        "room": "Rm202"
+      },
+      {
+        "t": "14:30–15:25",
+        "s": "PE",
+        "teacher": "ChanHS, YuCY",
+        "room": "BASKETB"
+      }
+    ],
+    "2": [
+      {
+        "t": "08:10–08:30",
+        "break": "Class Period"
+      },
+      {
+        "t": "08:30–09:25",
+        "s": "RSJ-Chi",
+        "teacher": "ChongYT, WongLY",
+        "room": "Rm202"
+      },
+      {
+        "t": "09:25–10:20",
+        "s": "CHS",
+        "teacher": "WongLY",
+        "room": "Rm202"
+      },
+      {
+        "t": "10:20–10:40",
+        "break": "Recess"
+      },
+      {
+        "t": "10:40–11:35",
+        "s": "IS",
+        "teacher": "YipWS",
+        "room": "Rm202"
+      },
+      {
+        "t": "11:35–12:30",
+        "s": "ENG",
+        "teacher": "ChongYT",
+        "room": "Rm202"
+      },
+      {
+        "t": "12:30–13:35",
+        "break": "Lunch"
+      },
+      {
+        "t": "13:35–14:30",
+        "s": "CHI",
+        "teacher": "LawST",
+        "room": "Rm202"
+      },
+      {
+        "t": "14:30–15:25",
+        "s": "MAT",
+        "teacher": "TseCH",
+        "room": "Rm202"
+      }
+    ],
+    "3": [
+      {
+        "t": "08:10–08:30",
+        "break": "Class Period"
+      },
+      {
+        "t": "08:30–09:25",
+        "s": "ENG",
+        "teacher": "ChongYT",
+        "room": "Rm202"
+      },
+      {
+        "t": "09:25–10:20",
+        "s": "MAT",
+        "teacher": "TseCH",
+        "room": "Rm202"
+      },
+      {
+        "t": "10:20–10:40",
+        "break": "Recess"
+      },
+      {
+        "t": "10:40–11:35",
+        "s": "HE",
+        "teacher": "CheungT",
+        "room": "HE_Rm",
+        "extra": "STEAM · LaiMF · STEAM_Lab"
+      },
+      {
+        "t": "11:35–12:30",
+        "s": "HE",
+        "teacher": "CheungT",
+        "room": "HE_Rm",
+        "extra": "STEAM · LaiMF · STEAM_Lab"
+      },
+      {
+        "t": "12:30–13:35",
+        "break": "Lunch"
+      },
+      {
+        "t": "13:35–14:30",
+        "s": "CES",
+        "teacher": "WongLY",
+        "room": "Rm202"
+      },
+      {
+        "t": "14:30–15:25",
+        "s": "HIS",
+        "teacher": "ChanKP",
+        "room": "Rm202"
+      }
+    ],
+    "4": [
+      {
+        "t": "08:10–08:30",
+        "break": "Class Period"
+      },
+      {
+        "t": "08:30–09:25",
+        "s": "GEO",
+        "teacher": "KwongTW",
+        "room": "Rm202"
+      },
+      {
+        "t": "09:25–10:20",
+        "s": "CHS",
+        "teacher": "WongLY",
+        "room": "Rm202"
+      },
+      {
+        "t": "10:20–10:40",
+        "break": "Recess"
+      },
+      {
+        "t": "10:40–11:35",
+        "s": "CHI",
+        "teacher": "LawST",
+        "room": "Rm202"
+      },
+      {
+        "t": "11:35–12:30",
+        "s": "ENG",
+        "teacher": "ChongYT",
+        "room": "Rm202"
+      },
+      {
+        "t": "12:30–13:35",
+        "break": "Lunch"
+      },
+      {
+        "t": "13:35–14:30",
+        "s": "MAT",
+        "teacher": "TseCH",
+        "room": "Rm202"
+      },
+      {
+        "t": "14:30–15:25",
+        "s": "CL",
+        "teacher": "ChungKW",
+        "room": "Rm702"
+      }
+    ],
+    "5": [
+      {
+        "t": "08:10–08:30",
+        "break": "Class Period"
+      },
+      {
+        "t": "08:30–09:25",
+        "s": "ENG",
+        "teacher": "ChongYT",
+        "room": "Rm202"
+      },
+      {
+        "t": "09:25–10:20",
+        "s": "ENG",
+        "teacher": "ChongYT",
+        "room": "Rm202"
+      },
+      {
+        "t": "10:20–10:40",
+        "break": "Recess"
+      },
+      {
+        "t": "10:40–11:35",
+        "s": "CHI",
+        "teacher": "LawST",
+        "room": "Rm202"
+      },
+      {
+        "t": "11:35–12:30",
+        "s": "MAT",
+        "teacher": "TseCH",
+        "room": "Rm202"
+      },
+      {
+        "t": "12:30–13:35",
+        "break": "Lunch"
+      },
+      {
+        "t": "13:35–14:30",
+        "s": "IS",
+        "teacher": "YipWS",
+        "room": "IS_Lab"
+      },
+      {
+        "t": "14:30–15:25",
+        "s": "LE",
+        "teacher": "ChongYT, WongLY",
+        "room": "Rm202"
+      }
+    ],
+    "6": [
+      {
+        "t": "08:10–08:30",
+        "break": "Class Period"
+      },
+      {
+        "t": "08:30–09:25",
+        "s": "CES",
+        "teacher": "WongLY",
+        "room": "Rm202"
+      },
+      {
+        "t": "09:25–10:20",
+        "s": "IS",
+        "teacher": "YipWS",
+        "room": "IS_Lab"
+      },
+      {
+        "t": "10:20–10:40",
+        "break": "Recess"
+      },
+      {
+        "t": "10:40–11:35",
+        "s": "CHI",
+        "teacher": "LawST",
+        "room": "Rm202"
+      },
+      {
+        "t": "11:35–12:30",
+        "s": "CHI",
+        "teacher": "LawST",
+        "room": "Rm202"
+      },
+      {
+        "t": "12:30–13:35",
+        "break": "Lunch"
+      },
+      {
+        "t": "13:35–14:30",
+        "s": "PE",
+        "teacher": "ChanHS, YuCY",
+        "room": "BASKETB"
+      },
+      {
+        "t": "14:30–15:25",
+        "s": "PE",
+        "teacher": "ChanHS, YuCY",
+        "room": "BASKETB"
+      }
+    ],
+    "7": [
+      {
+        "t": "08:10–08:30",
+        "break": "Class Period"
+      },
+      {
+        "t": "08:30–09:25",
+        "s": "RSJ-Eng",
+        "teacher": "ChongYT, WongLY",
+        "room": "Rm202"
+      },
+      {
+        "t": "09:25–10:20",
+        "s": "ENG",
+        "teacher": "ChongYT",
+        "room": "Rm202"
+      },
+      {
+        "t": "10:20–10:40",
+        "break": "Recess"
+      },
+      {
+        "t": "10:40–11:35",
+        "s": "MUS",
+        "teacher": "LauSY",
+        "room": "Mus_Rm"
+      },
+      {
+        "t": "11:35–12:30",
+        "s": "MUS",
+        "teacher": "LauSY",
+        "room": "Mus_Rm"
+      },
+      {
+        "t": "12:30–13:35",
+        "break": "Lunch"
+      },
+      {
+        "t": "13:35–14:30",
+        "s": "MAT",
+        "teacher": "TseCH",
+        "room": "Rm202"
+      },
+      {
+        "t": "14:30–15:25",
+        "s": "CHI",
+        "teacher": "LawST",
+        "room": "Rm202"
+      }
+    ],
+    "8": [
+      {
+        "t": "08:10–08:30",
+        "break": "Class Period"
+      },
+      {
+        "t": "08:30–09:25",
+        "s": "ENG",
+        "teacher": "ChongYT",
+        "room": "Rm202"
+      },
+      {
+        "t": "09:25–10:20",
+        "s": "CHI",
+        "teacher": "LawST",
+        "room": "Rm202"
+      },
+      {
+        "t": "10:20–10:40",
+        "break": "Recess"
+      },
+      {
+        "t": "10:40–11:35",
+        "s": "IS",
+        "teacher": "YipWS",
+        "room": "IS_Lab"
+      },
+      {
+        "t": "11:35–12:30",
+        "s": "IS",
+        "teacher": "YipWS",
+        "room": "IS_Lab"
+      },
+      {
+        "t": "12:30–13:35",
+        "break": "Lunch"
+      },
+      {
+        "t": "13:35–14:30",
+        "s": "MAT",
+        "teacher": "TseCH",
+        "room": "Rm202"
+      },
+      {
+        "t": "14:30–15:25",
+        "s": "CL",
+        "teacher": "ChungKW",
+        "room": "Rm702"
+      }
+    ],
+    "9": [
+      {
+        "t": "08:10–08:30",
+        "break": "Class Period"
+      },
+      {
+        "t": "08:30–09:25",
+        "s": "PE",
+        "teacher": "ChanHS, YuCY",
+        "room": "BASKETB"
+      },
+      {
+        "t": "09:25–10:20",
+        "s": "MAT",
+        "teacher": "TseCH",
+        "room": "Rm202"
+      },
+      {
+        "t": "10:20–10:40",
+        "break": "Recess"
+      },
+      {
+        "t": "10:40–11:35",
+        "s": "VA",
+        "teacher": "WongYT",
+        "room": "Art_Rm"
+      },
+      {
+        "t": "11:35–12:30",
+        "s": "VA",
+        "teacher": "WongYT",
+        "room": "Art_Rm"
+      },
+      {
+        "t": "12:30–13:35",
+        "break": "Lunch"
+      },
+      {
+        "t": "13:35–14:30",
+        "s": "ENG",
+        "teacher": "ChongYT",
+        "room": "Rm202"
+      },
+      {
+        "t": "14:30–15:25",
+        "s": "CHI",
+        "teacher": "LawST",
+        "room": "Rm202"
+      }
+    ],
+    "10": [
+      {
+        "t": "08:10–08:30",
+        "break": "Class Period"
+      },
+      {
+        "t": "08:30–09:25",
+        "s": "IS",
+        "teacher": "YipWS",
+        "room": "IS_Lab"
+      },
+      {
+        "t": "09:25–10:20",
+        "s": "CHS",
+        "teacher": "WongLY",
+        "room": "Rm202"
+      },
+      {
+        "t": "10:20–10:40",
+        "break": "Recess"
+      },
+      {
+        "t": "10:40–11:35",
+        "s": "MAT",
+        "teacher": "TseCH",
+        "room": "Rm202"
+      },
+      {
+        "t": "11:35–12:30",
+        "s": "CHI",
+        "teacher": "LawST",
+        "room": "Rm202"
+      },
+      {
+        "t": "12:30–13:35",
+        "break": "Lunch"
+      },
+      {
+        "t": "13:35–14:30",
+        "s": "HIS",
+        "teacher": "ChanKP",
+        "room": "Rm202"
+      },
+      {
+        "t": "14:30–15:25",
+        "s": "ENG",
+        "teacher": "ChongYT",
+        "room": "Rm202"
+      }
+    ]
+  },
+  "days": {
+    "2026-09-01": {
+      "tag": "CO",
+      "special": true,
+      "cycle": 1
+    },
+    "2026-09-02": {
+      "dn": 1,
+      "cycle": 1
+    },
+    "2026-09-03": {
+      "dn": 2,
+      "cycle": 1
+    },
+    "2026-09-04": {
+      "dn": 3,
+      "cycle": 1
+    },
+    "2026-09-05": {
+      "tag": "PD",
+      "special": true,
+      "cycle": 1
+    },
+    "2026-09-07": {
+      "dn": 4,
+      "cycle": 1
+    },
+    "2026-09-08": {
+      "dn": 5,
+      "cycle": 1
+    },
+    "2026-09-09": {
+      "dn": 6,
+      "cycle": 1
+    },
+    "2026-09-10": {
+      "dn": 7,
+      "cycle": 1
+    },
+    "2026-09-11": {
+      "dn": 8,
+      "cycle": 1
+    },
+    "2026-09-14": {
+      "dn": 9,
+      "cycle": 1
+    },
+    "2026-09-15": {
+      "dn": 10,
+      "cycle": 1
+    },
+    "2026-09-16": {
+      "dn": 1,
+      "cycle": 2
+    },
+    "2026-09-17": {
+      "dn": 2,
+      "cycle": 2
+    },
+    "2026-09-18": {
+      "dn": 3,
+      "cycle": 2
+    },
+    "2026-09-21": {
+      "dn": 4,
+      "cycle": 2
+    },
+    "2026-09-22": {
+      "dn": 5,
+      "cycle": 2
+    },
+    "2026-09-23": {
+      "dn": 6,
+      "cycle": 2
+    },
+    "2026-09-24": {
+      "dn": 7,
+      "cycle": 2
+    },
+    "2026-09-25": {
+      "dn": 8,
+      "cycle": 2
+    },
+    "2026-09-26": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2026-09-28": {
+      "dn": 9,
+      "cycle": 2
+    },
+    "2026-09-29": {
+      "dn": 10,
+      "cycle": 2
+    },
+    "2026-09-30": {
+      "dn": 1,
+      "cycle": 3
+    },
+    "2026-10-01": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2026-10-02": {
+      "dn": 2,
+      "cycle": 3
+    },
+    "2026-10-05": {
+      "dn": 3,
+      "cycle": 3
+    },
+    "2026-10-06": {
+      "dn": 4,
+      "cycle": 3
+    },
+    "2026-10-07": {
+      "dn": 5,
+      "cycle": 3
+    },
+    "2026-10-08": {
+      "dn": 6,
+      "cycle": 3
+    },
+    "2026-10-09": {
+      "dn": 7,
+      "cycle": 3
+    },
+    "2026-10-10": {
+      "tag": "SG",
+      "special": true,
+      "cycle": 3
+    },
+    "2026-10-12": {
+      "dn": 8,
+      "cycle": 3
+    },
+    "2026-10-13": {
+      "dn": 9,
+      "cycle": 3
+    },
+    "2026-10-14": {
+      "dn": 10,
+      "cycle": 3
+    },
+    "2026-10-15": {
+      "tag": "T1",
+      "special": true,
+      "cycle": 4
+    },
+    "2026-10-16": {
+      "tag": "T1",
+      "special": true,
+      "cycle": 4
+    },
+    "2026-10-17": {
+      "tag": "T1",
+      "special": true,
+      "cycle": 4
+    },
+    "2026-10-19": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2026-10-20": {
+      "tag": "T1",
+      "special": true,
+      "cycle": 4
+    },
+    "2026-10-21": {
+      "tag": "T1",
+      "special": true,
+      "cycle": 4
+    },
+    "2026-10-22": {
+      "tag": "T1",
+      "special": true,
+      "cycle": 4
+    },
+    "2026-10-23": {
+      "holiday": true,
+      "tag": "SD"
+    },
+    "2026-10-26": {
+      "dn": 1,
+      "cycle": 4
+    },
+    "2026-10-27": {
+      "dn": 2,
+      "cycle": 4
+    },
+    "2026-10-28": {
+      "tag": "SP",
+      "special": true,
+      "cycle": 4
+    },
+    "2026-10-29": {
+      "tag": "SP",
+      "special": true,
+      "cycle": 4
+    },
+    "2026-10-30": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2026-11-02": {
+      "dn": 3,
+      "cycle": 4
+    },
+    "2026-11-03": {
+      "dn": 4,
+      "cycle": 4
+    },
+    "2026-11-04": {
+      "dn": 5,
+      "cycle": 4
+    },
+    "2026-11-05": {
+      "dn": 6,
+      "cycle": 4
+    },
+    "2026-11-06": {
+      "tag": "PI",
+      "special": true,
+      "cycle": 4
+    },
+    "2026-11-09": {
+      "dn": 7,
+      "cycle": 4
+    },
+    "2026-11-10": {
+      "dn": 8,
+      "cycle": 4
+    },
+    "2026-11-11": {
+      "dn": 9,
+      "cycle": 4
+    },
+    "2026-11-12": {
+      "dn": 10,
+      "cycle": 4
+    },
+    "2026-11-13": {
+      "dn": 1,
+      "cycle": 5
+    },
+    "2026-11-14": {
+      "tag": "PD",
+      "special": true,
+      "cycle": 5
+    },
+    "2026-11-16": {
+      "dn": 2,
+      "cycle": 5
+    },
+    "2026-11-17": {
+      "dn": 3,
+      "cycle": 5
+    },
+    "2026-11-18": {
+      "dn": 4,
+      "cycle": 5
+    },
+    "2026-11-19": {
+      "dn": 5,
+      "cycle": 5
+    },
+    "2026-11-20": {
+      "dn": 6,
+      "cycle": 5,
+      "half": true
+    },
+    "2026-11-21": {
+      "tag": "OP",
+      "special": true,
+      "cycle": 5
+    },
+    "2026-11-23": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2026-11-24": {
+      "dn": 7,
+      "cycle": 5
+    },
+    "2026-11-25": {
+      "dn": 8,
+      "cycle": 5
+    },
+    "2026-11-26": {
+      "dn": 9,
+      "cycle": 5
+    },
+    "2026-11-27": {
+      "dn": 10,
+      "cycle": 5
+    },
+    "2026-11-30": {
+      "dn": 1,
+      "cycle": 6
+    },
+    "2026-12-01": {
+      "dn": 2,
+      "cycle": 6
+    },
+    "2026-12-02": {
+      "dn": 3,
+      "cycle": 6
+    },
+    "2026-12-03": {
+      "dn": 4,
+      "cycle": 6
+    },
+    "2026-12-04": {
+      "dn": 5,
+      "cycle": 6
+    },
+    "2026-12-07": {
+      "dn": 6,
+      "cycle": 6
+    },
+    "2026-12-08": {
+      "dn": 7,
+      "cycle": 6
+    },
+    "2026-12-09": {
+      "dn": 8,
+      "cycle": 6
+    },
+    "2026-12-10": {
+      "dn": 9,
+      "cycle": 6
+    },
+    "2026-12-11": {
+      "dn": 10,
+      "cycle": 6
+    },
+    "2026-12-14": {
+      "dn": 1,
+      "cycle": 7
+    },
+    "2026-12-15": {
+      "dn": 2,
+      "cycle": 7
+    },
+    "2026-12-16": {
+      "dn": 3,
+      "cycle": 7
+    },
+    "2026-12-17": {
+      "dn": 4,
+      "cycle": 7
+    },
+    "2026-12-18": {
+      "dn": 5,
+      "cycle": 7
+    },
+    "2026-12-21": {
+      "dn": 6,
+      "cycle": 7
+    },
+    "2026-12-22": {
+      "tag": "CH",
+      "special": true,
+      "cycle": 7
+    },
+    "2026-12-23": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2026-12-24": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2026-12-25": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2026-12-26": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2026-12-27": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2026-12-28": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2026-12-29": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2026-12-30": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2026-12-31": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-01-01": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-01-04": {
+      "tag": "E1",
+      "special": true,
+      "cycle": 8
+    },
+    "2027-01-05": {
+      "tag": "E1",
+      "special": true,
+      "cycle": 8
+    },
+    "2027-01-06": {
+      "holiday": true,
+      "tag": "SD"
+    },
+    "2027-01-07": {
+      "tag": "E1",
+      "special": true,
+      "cycle": 8
+    },
+    "2027-01-08": {
+      "tag": "E1",
+      "special": true,
+      "cycle": 8
+    },
+    "2027-01-11": {
+      "tag": "E1",
+      "special": true,
+      "cycle": 8
+    },
+    "2027-01-12": {
+      "tag": "E1",
+      "special": true,
+      "cycle": 8
+    },
+    "2027-01-13": {
+      "tag": "E1",
+      "special": true,
+      "cycle": 8
+    },
+    "2027-01-14": {
+      "tag": "E1",
+      "special": true,
+      "cycle": 8
+    },
+    "2027-01-15": {
+      "tag": "E1",
+      "special": true,
+      "cycle": 8
+    },
+    "2027-01-16": {
+      "tag": "FI",
+      "special": true,
+      "cycle": 8
+    },
+    "2027-01-18": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-01-19": {
+      "tag": "E1",
+      "special": true,
+      "cycle": 8
+    },
+    "2027-01-20": {
+      "dn": 7,
+      "cycle": 7
+    },
+    "2027-01-21": {
+      "dn": 8,
+      "cycle": 7
+    },
+    "2027-01-22": {
+      "dn": 9,
+      "cycle": 7
+    },
+    "2027-01-25": {
+      "dn": 10,
+      "cycle": 7
+    },
+    "2027-01-26": {
+      "dn": 1,
+      "cycle": 8
+    },
+    "2027-01-27": {
+      "dn": 2,
+      "cycle": 8,
+      "tag": "M"
+    },
+    "2027-01-28": {
+      "dn": 3,
+      "cycle": 8,
+      "tag": "M"
+    },
+    "2027-01-29": {
+      "dn": 4,
+      "cycle": 8,
+      "tag": "M"
+    },
+    "2027-02-01": {
+      "dn": 5,
+      "cycle": 8,
+      "tag": "M"
+    },
+    "2027-02-02": {
+      "dn": 6,
+      "cycle": 8,
+      "tag": "M"
+    },
+    "2027-02-03": {
+      "dn": 7,
+      "cycle": 8,
+      "tag": "M"
+    },
+    "2027-02-04": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-02-05": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-02-06": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-02-07": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-02-08": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-02-09": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-02-10": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-02-11": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-02-12": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-02-13": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-02-14": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-02-15": {
+      "dn": 8,
+      "cycle": 8,
+      "tag": "M"
+    },
+    "2027-02-16": {
+      "dn": 9,
+      "cycle": 8,
+      "tag": "M"
+    },
+    "2027-02-17": {
+      "dn": 10,
+      "cycle": 9,
+      "tag": "M"
+    },
+    "2027-02-18": {
+      "dn": 1,
+      "cycle": 9,
+      "tag": "M"
+    },
+    "2027-02-19": {
+      "dn": 2,
+      "cycle": 9,
+      "tag": "M"
+    },
+    "2027-02-20": {
+      "tag": "PD",
+      "special": true,
+      "cycle": 9
+    },
+    "2027-02-22": {
+      "dn": 3,
+      "cycle": 9,
+      "tag": "M"
+    },
+    "2027-02-23": {
+      "dn": 4,
+      "cycle": 9,
+      "tag": "M"
+    },
+    "2027-02-24": {
+      "dn": 5,
+      "cycle": 9
+    },
+    "2027-02-25": {
+      "dn": 6,
+      "cycle": 9,
+      "tag": "PC"
+    },
+    "2027-02-26": {
+      "tag": "SW",
+      "special": true,
+      "cycle": 9
+    },
+    "2027-03-01": {
+      "dn": 7,
+      "cycle": 9,
+      "tag": "PC"
+    },
+    "2027-03-02": {
+      "dn": 8,
+      "cycle": 9
+    },
+    "2027-03-03": {
+      "dn": 9,
+      "cycle": 9
+    },
+    "2027-03-04": {
+      "dn": 10,
+      "cycle": 10
+    },
+    "2027-03-05": {
+      "dn": 1,
+      "cycle": 10
+    },
+    "2027-03-08": {
+      "dn": 2,
+      "cycle": 10
+    },
+    "2027-03-09": {
+      "dn": 3,
+      "cycle": 10
+    },
+    "2027-03-10": {
+      "dn": 4,
+      "cycle": 10
+    },
+    "2027-03-11": {
+      "dn": 5,
+      "cycle": 10
+    },
+    "2027-03-12": {
+      "dn": 6,
+      "cycle": 10
+    },
+    "2027-03-15": {
+      "dn": 7,
+      "cycle": 10
+    },
+    "2027-03-16": {
+      "dn": 8,
+      "cycle": 10
+    },
+    "2027-03-17": {
+      "tag": "T2",
+      "special": true,
+      "cycle": 10
+    },
+    "2027-03-18": {
+      "tag": "T2",
+      "special": true,
+      "cycle": 10
+    },
+    "2027-03-19": {
+      "tag": "T2",
+      "special": true,
+      "cycle": 10
+    },
+    "2027-03-22": {
+      "tag": "T2",
+      "special": true,
+      "cycle": 10
+    },
+    "2027-03-23": {
+      "tag": "T2",
+      "special": true,
+      "cycle": 10
+    },
+    "2027-03-24": {
+      "tag": "T2",
+      "special": true,
+      "cycle": 10
+    },
+    "2027-03-25": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-03-26": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-03-27": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-03-28": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-03-29": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-03-30": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-03-31": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-04-01": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-04-02": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-04-03": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-04-04": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-04-05": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-04-06": {
+      "holiday": true,
+      "tag": "SH"
+    },
+    "2027-04-07": {
+      "dn": 9,
+      "cycle": 11
+    },
+    "2027-04-08": {
+      "dn": 10,
+      "cycle": 11
+    },
+    "2027-04-09": {
+      "dn": 1,
+      "cycle": 11
+    },
+    "2027-04-12": {
+      "dn": 2,
+      "cycle": 11
+    },
+    "2027-04-13": {
+      "dn": 3,
+      "cycle": 11
+    },
+    "2027-04-14": {
+      "dn": 4,
+      "cycle": 11
+    },
+    "2027-04-15": {
+      "dn": 5,
+      "cycle": 11
+    },
+    "2027-04-16": {
+      "dn": 6,
+      "cycle": 11
+    },
+    "2027-04-19": {
+      "dn": 7,
+      "cycle": 11
+    },
+    "2027-04-20": {
+      "dn": 8,
+      "cycle": 11
+    },
+    "2027-04-21": {
+      "dn": 9,
+      "cycle": 12
+    },
+    "2027-04-22": {
+      "dn": 10,
+      "cycle": 12
+    },
+    "2027-04-23": {
+      "dn": 1,
+      "cycle": 12
+    },
+    "2027-04-26": {
+      "dn": 2,
+      "cycle": 12
+    },
+    "2027-04-27": {
+      "dn": 3,
+      "cycle": 12
+    },
+    "2027-04-28": {
+      "dn": 4,
+      "cycle": 12
+    },
+    "2027-04-29": {
+      "dn": 5,
+      "cycle": 12
+    },
+    "2027-04-30": {
+      "dn": 6,
+      "cycle": 12
+    },
+    "2027-05-01": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-05-03": {
+      "dn": 7,
+      "cycle": 12
+    },
+    "2027-05-04": {
+      "dn": 8,
+      "cycle": 12
+    },
+    "2027-05-05": {
+      "dn": 9,
+      "cycle": 13
+    },
+    "2027-05-06": {
+      "dn": 10,
+      "cycle": 13
+    },
+    "2027-05-07": {
+      "dn": 1,
+      "cycle": 13
+    },
+    "2027-05-10": {
+      "dn": 2,
+      "cycle": 13
+    },
+    "2027-05-11": {
+      "dn": 3,
+      "cycle": 13
+    },
+    "2027-05-12": {
+      "dn": 4,
+      "cycle": 13
+    },
+    "2027-05-13": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-05-14": {
+      "dn": 5,
+      "cycle": 13
+    },
+    "2027-05-17": {
+      "dn": 6,
+      "cycle": 13
+    },
+    "2027-05-18": {
+      "dn": 7,
+      "cycle": 13
+    },
+    "2027-05-19": {
+      "dn": 8,
+      "cycle": 13
+    },
+    "2027-05-20": {
+      "dn": 9,
+      "cycle": 14
+    },
+    "2027-05-21": {
+      "dn": 10,
+      "cycle": 14
+    },
+    "2027-05-24": {
+      "dn": 1,
+      "cycle": 14
+    },
+    "2027-05-25": {
+      "dn": 2,
+      "cycle": 14
+    },
+    "2027-05-26": {
+      "dn": 3,
+      "cycle": 14
+    },
+    "2027-05-27": {
+      "dn": 4,
+      "cycle": 14
+    },
+    "2027-05-28": {
+      "dn": 5,
+      "cycle": 14
+    },
+    "2027-05-31": {
+      "dn": 6,
+      "cycle": 14
+    },
+    "2027-06-01": {
+      "holiday": true,
+      "tag": "SD"
+    },
+    "2027-06-02": {
+      "tag": "E2",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-03": {
+      "tag": "E2",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-04": {
+      "tag": "E2",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-07": {
+      "tag": "E2",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-08": {
+      "tag": "E2",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-09": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-06-10": {
+      "tag": "E2",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-11": {
+      "tag": "E2",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-14": {
+      "tag": "E2",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-15": {
+      "tag": "E2",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-16": {
+      "tag": "E2",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-17": {
+      "tag": "TSA",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-18": {
+      "tag": "TSA",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-21": {
+      "tag": "PC",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-22": {
+      "tag": "PC",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-23": {
+      "tag": "PC",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-24": {
+      "tag": "OLE",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-25": {
+      "tag": "SPD",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-28": {
+      "tag": "OLE",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-29": {
+      "tag": "OLE",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-06-30": {
+      "tag": "OLE",
+      "special": true,
+      "cycle": 15
+    },
+    "2027-07-01": {
+      "holiday": true,
+      "tag": "PH"
+    },
+    "2027-07-02": {
+      "tag": "SU",
+      "special": true
+    },
+    "2027-07-05": {
+      "tag": "OLE",
+      "special": true
+    },
+    "2027-07-06": {
+      "tag": "OLE",
+      "special": true
+    },
+    "2027-07-07": {
+      "tag": "IB",
+      "special": true
+    },
+    "2027-07-08": {
+      "tag": "OLE",
+      "special": true
+    },
+    "2027-07-09": {
+      "tag": "AC",
+      "special": true
+    },
+    "2027-07-12": {
+      "tag": "YE",
+      "special": true
+    },
+    "2027-07-13": {
+      "tag": "SUH",
+      "summer": true
+    },
+    "2027-08-27": {
+      "tag": "ORI",
+      "summer": true
+    }
+  },
+  "events": [
+    {
+      "start": "2026-09-01",
+      "end": "2026-09-01",
+      "text": "School Commencement and Student Leader Inauguration Ceremony"
+    },
+    {
+      "start": "2026-09-03",
+      "end": "2026-09-04",
+      "text": "STEAM Teams Experience Days"
+    },
+    {
+      "start": "2026-09-03",
+      "end": "2026-09-12",
+      "text": "Selection of F.1 & F.2–4 new students for school teams"
+    },
+    {
+      "start": "2026-09-05",
+      "end": "2026-09-05",
+      "text": "F.1 & BYP Parents Day"
+    },
+    {
+      "start": "2026-09-21",
+      "end": "2026-09-21",
+      "text": "Confirmation of F.1 & F.2–4 new students for school teams"
+    },
+    {
+      "start": "2026-09-26",
+      "end": "2026-09-26",
+      "text": "Day following Mid-Autumn Festival"
+    },
+    {
+      "start": "2026-10-01",
+      "end": "2026-10-01",
+      "text": "National Day"
+    },
+    {
+      "start": "2026-10-02",
+      "end": "2026-10-02",
+      "text": "PTA AGM"
+    },
+    {
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "text": "PLK Joint School Swimming Gala"
+    },
+    {
+      "start": "2026-10-15",
+      "end": "2026-10-15",
+      "text": "Enrolment for ECA Interest Clubs and Uniform Teams"
+    },
+    {
+      "start": "2026-10-15",
+      "end": "2026-10-22",
+      "text": "First Term Test (Special Cycle for F.6IB)"
+    },
+    {
+      "start": "2026-10-19",
+      "end": "2026-10-19",
+      "text": "Chung Yeung Festival (day following)"
+    },
+    {
+      "start": "2026-10-23",
+      "end": "2026-10-23",
+      "text": "Staff Development Day (1)"
+    },
+    {
+      "start": "2026-10-28",
+      "end": "2026-10-29",
+      "text": "Sports Day"
+    },
+    {
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "text": "School Holiday after Sports Day"
+    },
+    {
+      "start": "2026-11-03",
+      "end": "2026-11-03",
+      "text": "Dunman High School Visit"
+    },
+    {
+      "start": "2026-11-06",
+      "end": "2026-11-06",
+      "text": "School Picnic"
+    },
+    {
+      "start": "2026-11-09",
+      "end": "2026-11-09",
+      "text": "Transition Period for Winter Uniform"
+    },
+    {
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "text": "F.6 Parents Day"
+    },
+    {
+      "start": "2026-11-14",
+      "end": "2026-11-16",
+      "text": "Report Card Release"
+    },
+    {
+      "start": "2026-11-16",
+      "end": "2026-11-16",
+      "text": "Change of Winter Uniform"
+    },
+    {
+      "start": "2026-11-16",
+      "end": "2026-12-24",
+      "text": "F.1 Admission Phase 1 Application"
+    },
+    {
+      "start": "2026-11-20",
+      "end": "2026-11-20",
+      "text": "Open Day Preparation (Half-day lesson)"
+    },
+    {
+      "start": "2026-11-21",
+      "end": "2026-11-21",
+      "text": "School Open Day"
+    },
+    {
+      "start": "2026-11-23",
+      "end": "2026-11-23",
+      "text": "School Holiday after School Open Day"
+    },
+    {
+      "start": "2026-12-11",
+      "end": "2026-12-11",
+      "text": "F.6 Farewell Life Education Lesson"
+    },
+    {
+      "start": "2026-12-21",
+      "end": "2026-12-21",
+      "text": "Photo Day"
+    },
+    {
+      "start": "2026-12-22",
+      "end": "2026-12-22",
+      "text": "Christmas Celebration"
+    },
+    {
+      "start": "2026-12-23",
+      "end": "2027-01-01",
+      "text": "Christmas & New Year Holiday"
+    },
+    {
+      "start": "2027-01-01",
+      "end": "2027-01-01",
+      "text": "The first day of January"
+    },
+    {
+      "start": "2027-01-04",
+      "end": "2027-01-19",
+      "text": "First Term Examination (Special Cycle for F.6)"
+    },
+    {
+      "start": "2027-01-06",
+      "end": "2027-01-06",
+      "text": "Staff Development Day (2)"
+    },
+    {
+      "start": "2027-01-16",
+      "end": "2027-01-16",
+      "text": "F.1 Admission Interview"
+    },
+    {
+      "start": "2027-01-18",
+      "end": "2027-01-18",
+      "text": "School Holiday after F.1 Admission Interview"
+    },
+    {
+      "start": "2027-01-20",
+      "end": "2027-01-20",
+      "text": "Commencement of Second Term"
+    },
+    {
+      "start": "2027-01-27",
+      "end": "2027-02-23",
+      "text": "F.6 DSE / IB Mock Examination"
+    },
+    {
+      "start": "2027-01-29",
+      "end": "2027-01-29",
+      "text": "Chinese Culture Day"
+    },
+    {
+      "start": "2027-01-29",
+      "end": "2027-01-29",
+      "text": "PTA Annual Dinner"
+    },
+    {
+      "start": "2027-02-04",
+      "end": "2027-02-14",
+      "text": "Lunar New Year Holiday"
+    },
+    {
+      "start": "2027-02-20",
+      "end": "2027-02-20",
+      "text": "Parents Day (F.1–5)"
+    },
+    {
+      "start": "2027-02-24",
+      "end": "2027-03-01",
+      "text": "F.6 DSE / IB Mock Examination Paper Checking Days"
+    },
+    {
+      "start": "2027-02-25",
+      "end": "2027-02-25",
+      "text": "F.6 Farewell Speech"
+    },
+    {
+      "start": "2027-02-26",
+      "end": "2027-02-26",
+      "text": "Swimming Gala"
+    },
+    {
+      "start": "2027-03-02",
+      "end": "2027-03-02",
+      "text": "Commencement of F.6 Study Leave"
+    },
+    {
+      "start": "2027-03-02",
+      "end": "2027-03-02",
+      "text": "Proposed SU Application Briefing"
+    },
+    {
+      "start": "2027-03-02",
+      "end": "2027-03-24",
+      "text": "F.6 DSE / IB Collapsed Timetable"
+    },
+    {
+      "start": "2027-03-05",
+      "end": "2027-03-05",
+      "text": "IB Information Night"
+    },
+    {
+      "start": "2027-03-05",
+      "end": "2027-03-05",
+      "text": "PLK Joint School Sports Day"
+    },
+    {
+      "start": "2027-03-08",
+      "end": "2027-03-08",
+      "text": "F.1 Admission Result Release"
+    },
+    {
+      "start": "2027-03-17",
+      "end": "2027-03-24",
+      "text": "F.3–5 Second Term Test (Special Cycle for F.1–2 & F.6IB)"
+    },
+    {
+      "start": "2027-03-18",
+      "end": "2027-03-24",
+      "text": "F.1–2 Second Term Test (Special Cycle for F.6IB)"
+    },
+    {
+      "start": "2027-03-25",
+      "end": "2027-04-06",
+      "text": "Easter Holiday"
+    },
+    {
+      "start": "2027-03-26",
+      "end": "2027-03-26",
+      "text": "Good Friday"
+    },
+    {
+      "start": "2027-03-27",
+      "end": "2027-03-27",
+      "text": "The day following Good Friday"
+    },
+    {
+      "start": "2027-03-29",
+      "end": "2027-03-29",
+      "text": "Easter Monday"
+    },
+    {
+      "start": "2027-04-03",
+      "end": "2027-04-09",
+      "text": "IB CAS Trip",
+      "spanAll": true
+    },
+    {
+      "start": "2027-04-05",
+      "end": "2027-04-05",
+      "text": "Ching Ming Festival"
+    },
+    {
+      "start": "2027-04-06",
+      "end": "2027-04-06",
+      "text": "Commencement of HKDSE Examination"
+    },
+    {
+      "start": "2027-04-07",
+      "end": "2027-04-07",
+      "text": "Transition Period for Summer Uniform"
+    },
+    {
+      "start": "2027-04-12",
+      "end": "2027-04-12",
+      "text": "Change of Summer Uniform"
+    },
+    {
+      "start": "2027-04-12",
+      "end": "2027-04-15",
+      "text": "STEAM Week"
+    },
+    {
+      "start": "2027-04-23",
+      "end": "2027-04-23",
+      "text": "Report Card Release"
+    },
+    {
+      "start": "2027-04-23",
+      "end": "2027-04-30",
+      "text": "F.1–5 Sunshine Call"
+    },
+    {
+      "start": "2027-04-26",
+      "end": "2027-05-18",
+      "text": "IB Examination"
+    },
+    {
+      "start": "2027-04-28",
+      "end": "2027-04-29",
+      "text": "F.3 TSA Oral Test"
+    },
+    {
+      "start": "2027-05-01",
+      "end": "2027-05-01",
+      "text": "Labour Day"
+    },
+    {
+      "start": "2027-05-05",
+      "end": "2027-05-07",
+      "text": "Guidance Week"
+    },
+    {
+      "start": "2027-05-10",
+      "end": "2027-05-14",
+      "text": "Hostel Application"
+    },
+    {
+      "start": "2027-05-13",
+      "end": "2027-05-13",
+      "text": "Birthday of the Buddha"
+    },
+    {
+      "start": "2027-06-01",
+      "end": "2027-06-01",
+      "text": "Staff Development Day (3)"
+    },
+    {
+      "start": "2027-06-02",
+      "end": "2027-06-16",
+      "text": "Final Examination"
+    },
+    {
+      "start": "2027-06-09",
+      "end": "2027-06-09",
+      "text": "Tuen Ng Festival"
+    },
+    {
+      "start": "2027-06-17",
+      "end": "2027-06-18",
+      "text": "F.3 TSA"
+    },
+    {
+      "start": "2027-06-21",
+      "end": "2027-06-23",
+      "text": "Final Examination Paper Checking Days"
+    },
+    {
+      "start": "2027-06-24",
+      "end": "2027-07-09",
+      "text": "OLE Week / Post Examination Activities"
+    },
+    {
+      "start": "2027-06-24",
+      "end": "2027-07-16",
+      "text": "F.4–5 Additional Cycles",
+      "spanAll": true
+    },
+    {
+      "start": "2027-06-25",
+      "end": "2027-06-25",
+      "text": "Speech Day"
+    },
+    {
+      "start": "2027-07-01",
+      "end": "2027-07-01",
+      "text": "Hong Kong Special Administrative Region Establishment Day"
+    },
+    {
+      "start": "2027-07-02",
+      "end": "2027-07-02",
+      "text": "SU AGM, Forum and Election"
+    },
+    {
+      "start": "2027-07-06",
+      "end": "2027-07-06",
+      "text": "IB Result Release Day"
+    },
+    {
+      "start": "2027-07-06",
+      "end": "2027-07-12",
+      "text": "Hostel Application (New Students)"
+    },
+    {
+      "start": "2027-07-09",
+      "end": "2027-07-09",
+      "text": "Annual Concert"
+    },
+    {
+      "start": "2027-07-12",
+      "end": "2027-07-12",
+      "text": "Year-end Ceremony"
+    },
+    {
+      "start": "2027-07-13",
+      "end": "2027-07-13",
+      "text": "Pre-F.1 Attainment Test"
+    },
+    {
+      "start": "2027-07-13",
+      "end": "2027-08-31",
+      "text": "Summer Holiday"
+    },
+    {
+      "start": "2027-07-14",
+      "end": "2027-07-14",
+      "text": "DSE Result Release Day"
+    },
+    {
+      "start": "2027-08-16",
+      "end": "2027-08-31",
+      "text": "F.6 Additional Cycles"
+    },
+    {
+      "start": "2027-08-27",
+      "end": "2027-08-27",
+      "text": "F.1 Orientation"
+    }
+  ],
+  "tagLabels": {
+    "CO": "Commencement",
+    "PD": "Parents Day",
+    "PH": "Public Holiday",
+    "SH": "School Holiday",
+    "SD": "Staff Development",
+    "SG": "Swimming Gala",
+    "T1": "Term Test",
+    "T2": "Term Test",
+    "SP": "Sports Day",
+    "PI": "Picnic",
+    "OP": "Open Day",
+    "CH": "Celebration",
+    "E1": "Examination",
+    "E2": "Examination",
+    "FI": "Admission Interview",
+    "M": "F.6 Mock",
+    "PC": "Paper Checking",
+    "SW": "Swimming Gala",
+    "SDY": "Sports Day",
+    "TSA": "TSA",
+    "OLE": "OLE / Post-exam",
+    "SPD": "Speech Day",
+    "SU": "SU AGM",
+    "IB": "IB Results",
+    "AC": "Annual Concert",
+    "YE": "Year-end",
+    "SUH": "Summer Holiday",
+    "ORI": "F.1 Orientation"
+  }
+}
