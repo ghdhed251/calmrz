@@ -2,7 +2,7 @@
    Bump CACHE_VERSION when you publish a new version of the calendar.
    Network-first for HTML and JSON so fresh data/code is used when online.
 */
-const CACHE_VERSION = "v12";
+const CACHE_VERSION = "v13";
 const CACHE = "plknpl-cal-" + CACHE_VERSION;
 
 const PRECACHE = [
