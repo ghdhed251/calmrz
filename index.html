@@ -70,6 +70,34 @@
     flex-direction: column;
   }
 
+  /* iOS "Add to Home Screen" / standalone: keep content clear of Dynamic Island
+     and the home indicator, and use the full screen height. */
+  @media (display-mode: standalone) {
+    .app {
+      height: 100dvh;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+      box-sizing: border-box;
+    }
+    header.top {
+      padding-top: 8px;
+    }
+  }
+  html.standalone .app {
+    height: 100dvh;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    box-sizing: border-box;
+  }
+  html.standalone header.top {
+    padding-top: 8px;
+  }
+
+
   .body {
     flex: 1 1 auto;
     min-height: 0;
@@ -3013,6 +3041,11 @@ function renderWidget(size, key) {
   }
 }
 
+}
+
+// Mark standalone (Add to Home Screen) so CSS can apply safe-area padding
+if (window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches) {
+  document.documentElement.classList.add("standalone");
 }
 
 if ("serviceWorker" in navigator) {
