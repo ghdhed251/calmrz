@@ -1771,11 +1771,6 @@ window.SCHOOL_DATA = {
     {
       "start": "2026-11-06",
       "end": "2026-11-06",
-      "text": "Buy Lunch"
-    },
-    {
-      "start": "2026-11-06",
-      "end": "2026-11-06",
       "text": "School Picnic"
     },
     {
