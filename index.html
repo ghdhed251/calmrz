@@ -84,6 +84,7 @@
 
   header.top {
     flex: 0 0 auto;
+    overflow: visible;
     min-height: var(--header-h);
     display: flex;
     flex-direction: column;
@@ -1463,16 +1464,16 @@
   .search-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.2; }
   .search-pop {
     display: none;
-    position: absolute;
-    top: 52px;
-    right: 10px;
-    z-index: 30;
+    position: fixed;
+    top: 58px;
+    right: 12px;
+    z-index: 1000;
     width: min(320px, calc(100vw - 24px));
     background: #2a333c;
     border: 1px solid rgba(255,255,255,.12);
     border-radius: 12px;
     padding: 10px;
-    box-shadow: 0 8px 28px rgba(0,0,0,.45);
+    box-shadow: 0 8px 28px rgba(0,0,0,.5);
   }
   .search-pop.open { display: block; }
   .search-pop input {
@@ -1499,6 +1500,10 @@
 </style>
 </head>
 <body>
+<div class="search-pop" id="searchPop">
+      <input type="search" id="searchInput" placeholder="Search events, lessons…" autocomplete="off" enterkeyhint="search">
+      <div class="search-msg" id="searchMsg"></div>
+    </div>
 <div class="app" id="app">
   <header class="top">
     <div class="top-row">
@@ -1519,10 +1524,7 @@
         </button>
       </div>
     </div>
-    <div class="search-pop" id="searchPop">
-      <input type="search" id="searchInput" placeholder="Search events, lessons…" autocomplete="off" enterkeyhint="search">
-      <div class="search-msg" id="searchMsg"></div>
-    </div>
+
     <nav class="month-nav" id="monthNav" aria-label="Months"></nav>
   </header>
   <noscript style="display:block;padding:16px;background:#fff3cd;color:#664d03;">This calendar needs JavaScript. Open the file in Safari (not Quick Look / Files preview).</noscript>
@@ -3073,24 +3075,6 @@ function renderWidget(size, key) {
   }
 }
 
-}
-
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js").then(reg => {
-      // When a new service worker activates, reload to pick up fresh code/data
-      let refreshing = false;
-      navigator.serviceWorker.addEventListener("controllerchange", () => {
-        if (refreshing) return;
-        refreshing = true;
-        location.reload();
-      });
-      // Optional: check for updates periodically while the app is open
-      setInterval(() => reg.update().catch(() => {}), 60 * 60 * 1000);
-    }).catch(() => {});
-  });
-}
-
 
 // --- Search ---
 (function initSearch() {
@@ -3126,9 +3110,10 @@ if ("serviceWorker" in navigator) {
   function findMatch(q) {
     const query = q.trim().toLowerCase();
     if (!query) return null;
-    // Collect candidate dates from events
+    // Read events from the loaded calendar data (JSON or JS fallback)
+    const events = (window.__CAL && window.__CAL.events) || [];
     const hits = [];
-    for (const ev of (typeof EVENTS !== "undefined" ? EVENTS : [])) {
+    for (const ev of events) {
       const text = (ev.text || "").toLowerCase();
       if (!text.includes(query)) continue;
       const start = ev.start;
@@ -3168,9 +3153,9 @@ if ("serviceWorker" in navigator) {
       if (calBtn) calBtn.click();
     }
     setTimeout(() => {
-      if (typeof scrollDayToCenter === "function") scrollDayToCenter(key, "smooth");
-      if (typeof selectDay === "function") selectDay(key);
-    }, 60);
+      scrollDayToCenter(key, "smooth");
+      selectDay(key);
+    }, 120);
   }
 
   input.addEventListener("keydown", (e) => {
@@ -3181,6 +3166,25 @@ if ("serviceWorker" in navigator) {
     msg.classList.remove("err");
   });
 })();
+
+}
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").then(reg => {
+      // When a new service worker activates, reload to pick up fresh code/data
+      let refreshing = false;
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (refreshing) return;
+        refreshing = true;
+        location.reload();
+      });
+      // Optional: check for updates periodically while the app is open
+      setInterval(() => reg.update().catch(() => {}), 60 * 60 * 1000);
+    }).catch(() => {});
+  });
+}
+
 
 boot();
 </script>
