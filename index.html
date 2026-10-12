@@ -1444,6 +1444,58 @@
   .ios-widget.medium { display: grid; grid-template-columns: 118px 1fr; gap: 10px; }
   .ios-widget.medium .w-side { min-width: 0; }
   .widget-cap { color: #aaa; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  .search-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 99px;
+    background: rgba(255,255,255,.08);
+    color: #fff8e8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    margin-left: 6px;
+  }
+  .search-btn:hover, .search-btn.on { background: rgba(90,210,255,.25); color: #5ad2ff; }
+  .search-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.2; }
+  .search-pop {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 10px;
+    z-index: 30;
+    width: min(320px, calc(100vw - 24px));
+    background: #2a333c;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 8px 28px rgba(0,0,0,.45);
+  }
+  .search-pop.open { display: block; }
+  .search-pop input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,.15);
+    background: #1c2228;
+    color: #fff8e8;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+  }
+  .search-pop input:focus { border-color: #5ad2ff; }
+  .search-pop .search-msg {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #8eb8c8;
+    min-height: 1.2em;
+  }
+  .search-pop .search-msg.err { color: #ff8a7a; }
+  header.top { position: relative; }
 </style>
 </head>
 <body>
@@ -1462,7 +1514,14 @@
         <a class="tt-link" href="?widgets" hidden>Widget</a>
         <span class="keep"><i class="swatch hol"></i>Holiday</span>
         <span class="keep"><i class="swatch exam"></i>Test/Exam</span>
+        <button type="button" class="search-btn" id="searchBtn" aria-label="Search" title="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </button>
       </div>
+    </div>
+    <div class="search-pop" id="searchPop">
+      <input type="search" id="searchInput" placeholder="Search events, lessons…" autocomplete="off" enterkeyhint="search">
+      <div class="search-msg" id="searchMsg"></div>
     </div>
     <nav class="month-nav" id="monthNav" aria-label="Months"></nav>
   </header>
@@ -3031,6 +3090,97 @@ if ("serviceWorker" in navigator) {
     }).catch(() => {});
   });
 }
+
+
+// --- Search ---
+(function initSearch() {
+  const btn = document.getElementById("searchBtn");
+  const pop = document.getElementById("searchPop");
+  const input = document.getElementById("searchInput");
+  const msg = document.getElementById("searchMsg");
+  if (!btn || !pop || !input) return;
+
+  function openSearch() {
+    pop.classList.add("open");
+    btn.classList.add("on");
+    setTimeout(() => input.focus(), 30);
+  }
+  function closeSearch() {
+    pop.classList.remove("open");
+    btn.classList.remove("on");
+    msg.textContent = "";
+    msg.classList.remove("err");
+  }
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (pop.classList.contains("open")) closeSearch();
+    else openSearch();
+  });
+  document.addEventListener("click", (e) => {
+    if (!pop.contains(e.target) && e.target !== btn) closeSearch();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeSearch();
+  });
+
+  function findMatch(q) {
+    const query = q.trim().toLowerCase();
+    if (!query) return null;
+    // Collect candidate dates from events
+    const hits = [];
+    for (const ev of (typeof EVENTS !== "undefined" ? EVENTS : [])) {
+      const text = (ev.text || "").toLowerCase();
+      if (!text.includes(query)) continue;
+      const start = ev.start;
+      const end = ev.end || start;
+      if (!start) continue;
+      // Walk the range and pick the first day the event applies
+      let d = start;
+      while (d <= end) {
+        if (typeof eventAppliesToDay !== "function" || eventAppliesToDay(ev, d)) {
+          hits.push(d);
+          break;
+        }
+        // next day
+        const [y, m, day] = d.split("-").map(Number);
+        const nd = new Date(y, m - 1, day + 1);
+        d = nd.getFullYear() + "-" + String(nd.getMonth()+1).padStart(2,"0") + "-" + String(nd.getDate()).padStart(2,"0");
+        if (d > end) break;
+      }
+    }
+    hits.sort();
+    return hits[0] || null;
+  }
+
+  function doSearch() {
+    const q = input.value;
+    const key = findMatch(q);
+    if (!key) {
+      msg.textContent = q.trim() ? "No matching day found" : "";
+      msg.classList.add("err");
+      return;
+    }
+    msg.textContent = "Found " + key;
+    msg.classList.remove("err");
+    // Switch to month view if in week view so the cell is visible
+    if (app.classList.contains("view-tt")) {
+      const calBtn = document.getElementById("viewCal");
+      if (calBtn) calBtn.click();
+    }
+    setTimeout(() => {
+      if (typeof scrollDayToCenter === "function") scrollDayToCenter(key, "smooth");
+      if (typeof selectDay === "function") selectDay(key);
+    }, 60);
+  }
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") { e.preventDefault(); doSearch(); }
+  });
+  input.addEventListener("input", () => {
+    msg.textContent = "";
+    msg.classList.remove("err");
+  });
+})();
 
 boot();
 </script>
