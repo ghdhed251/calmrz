@@ -1743,6 +1743,11 @@
       "text": "Staff Development Day (1)"
     },
     {
+      "start": "2026-10-24",
+      "end": "2026-10-24",
+      "text": "Astronomy 101 (10:00–12:00 @ Astronomy Center)"
+    },
+    {
       "start": "2026-10-28",
       "end": "2026-10-29",
       "text": "Sports Day"
@@ -1763,9 +1768,19 @@
       "text": "School Picnic"
     },
     {
+      "start": "2026-11-07",
+      "end": "2026-11-07",
+      "text": "Night Observation (18:30–20:30 @ Astronomy Center)"
+    },
+    {
       "start": "2026-11-09",
       "end": "2026-11-09",
       "text": "Transition Period for Winter Uniform"
+    },
+    {
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "text": "Astronomy 101 (10:00–12:00 @ Astronomy Center)"
     },
     {
       "start": "2026-11-14",
@@ -1803,9 +1818,29 @@
       "text": "School Holiday after School Open Day"
     },
     {
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "text": "Astronomy 101 (10:00–12:00 @ Astronomy Center)"
+    },
+    {
+      "start": "2026-12-05",
+      "end": "2026-12-05",
+      "text": "Astronomy 101 (10:00–12:00 @ Astronomy Center)"
+    },
+    {
       "start": "2026-12-11",
       "end": "2026-12-11",
       "text": "F.6 Farewell Life Education Lesson"
+    },
+    {
+      "start": "2026-12-12",
+      "end": "2026-12-12",
+      "text": "Night Observation (18:30–20:30 @ Astronomy Center)"
+    },
+    {
+      "start": "2026-12-19",
+      "end": "2026-12-19",
+      "text": "Astronomy 101 (10:00–12:00 @ Astronomy Center)"
     },
     {
       "start": "2026-12-21",
@@ -2118,6 +2153,41 @@
       "start": "2027-08-27",
       "end": "2027-08-27",
       "text": "F.1 Orientation"
+    },
+    {
+      "start": "2026-11-02",
+      "end": "2026-11-02",
+      "text": "Buy Lunch"
+    },
+    {
+      "start": "2026-11-06",
+      "end": "2026-11-06",
+      "text": "Buy Lunch"
+    },
+    {
+      "start": "2026-11-13",
+      "end": "2026-11-13",
+      "text": "Buy Lunch"
+    },
+    {
+      "start": "2026-11-20",
+      "end": "2026-11-20",
+      "text": "Buy Lunch"
+    },
+    {
+      "start": "2026-11-23",
+      "end": "2026-11-23",
+      "text": "Buy Lunch"
+    },
+    {
+      "start": "2026-11-26",
+      "end": "2026-11-26",
+      "text": "Buy Lunch"
+    },
+    {
+      "start": "2026-11-27",
+      "end": "2026-11-27",
+      "text": "Buy Lunch"
     }
   ],
   "tagLabels": {
