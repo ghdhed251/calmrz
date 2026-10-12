@@ -3087,7 +3087,8 @@ function renderWidget(size, key) {
   function openSearch() {
     pop.classList.add("open");
     btn.classList.add("on");
-    setTimeout(() => input.focus(), 30);
+    // iOS only allows focus() when called synchronously from the tap
+    input.focus();
   }
   function closeSearch() {
     pop.classList.remove("open");
