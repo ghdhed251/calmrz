@@ -1553,6 +1553,7 @@ function isAfterSchoolDay(key) {
 }
 function isBadmintonDay(key) {
   if (!isAfterSchoolDay(key)) return false;
+  if (key === "2026-10-13") return false; // no Badminton this Tuesday
   const [y, m, d] = key.split("-").map(Number);
   return new Date(y, m - 1, d).getDay() === 2;
 }

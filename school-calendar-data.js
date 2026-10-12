@@ -1685,13 +1685,13 @@ window.SCHOOL_DATA = {
     },
     {
       "start": "2026-09-03",
-      "end": "2026-09-04",
-      "text": "STEAM Teams Experience Days"
+      "end": "2026-09-12",
+      "text": "Selection of F.1 & F.2–4 new students for school teams"
     },
     {
       "start": "2026-09-03",
-      "end": "2026-09-12",
-      "text": "Selection of F.1 & F.2–4 new students for school teams"
+      "end": "2026-09-04",
+      "text": "STEAM Teams Experience Days"
     },
     {
       "start": "2026-09-05",
@@ -1759,9 +1759,19 @@ window.SCHOOL_DATA = {
       "text": "School Holiday after Sports Day"
     },
     {
+      "start": "2026-11-02",
+      "end": "2026-11-02",
+      "text": "Buy Lunch"
+    },
+    {
       "start": "2026-11-03",
       "end": "2026-11-03",
       "text": "Dunman High School Visit"
+    },
+    {
+      "start": "2026-11-06",
+      "end": "2026-11-06",
+      "text": "Buy Lunch"
     },
     {
       "start": "2026-11-06",
@@ -1777,6 +1787,11 @@ window.SCHOOL_DATA = {
       "start": "2026-11-09",
       "end": "2026-11-09",
       "text": "Transition Period for Winter Uniform"
+    },
+    {
+      "start": "2026-11-13",
+      "end": "2026-11-13",
+      "text": "Buy Lunch"
     },
     {
       "start": "2026-11-14",
@@ -1806,6 +1821,11 @@ window.SCHOOL_DATA = {
     {
       "start": "2026-11-20",
       "end": "2026-11-20",
+      "text": "Buy Lunch"
+    },
+    {
+      "start": "2026-11-20",
+      "end": "2026-11-20",
       "text": "Open Day Preparation (Half-day lesson)"
     },
     {
@@ -1817,6 +1837,16 @@ window.SCHOOL_DATA = {
       "start": "2026-11-23",
       "end": "2026-11-23",
       "text": "School Holiday after School Open Day"
+    },
+    {
+      "start": "2026-11-26",
+      "end": "2026-11-26",
+      "text": "Buy Lunch"
+    },
+    {
+      "start": "2026-11-27",
+      "end": "2026-11-27",
+      "text": "Buy Lunch"
     },
     {
       "start": "2026-11-28",
@@ -1935,13 +1965,13 @@ window.SCHOOL_DATA = {
     },
     {
       "start": "2027-03-02",
-      "end": "2027-03-02",
-      "text": "Proposed SU Application Briefing"
+      "end": "2027-03-24",
+      "text": "F.6 DSE / IB Collapsed Timetable"
     },
     {
       "start": "2027-03-02",
-      "end": "2027-03-24",
-      "text": "F.6 DSE / IB Collapsed Timetable"
+      "end": "2027-03-02",
+      "text": "Proposed SU Application Briefing"
     },
     {
       "start": "2027-03-05",
@@ -2021,13 +2051,13 @@ window.SCHOOL_DATA = {
     },
     {
       "start": "2027-04-23",
-      "end": "2027-04-23",
-      "text": "Report Card Release"
+      "end": "2027-04-30",
+      "text": "F.1–5 Sunshine Call"
     },
     {
       "start": "2027-04-23",
-      "end": "2027-04-30",
-      "text": "F.1–5 Sunshine Call"
+      "end": "2027-04-23",
+      "text": "Report Card Release"
     },
     {
       "start": "2027-04-26",
@@ -2086,14 +2116,14 @@ window.SCHOOL_DATA = {
     },
     {
       "start": "2027-06-24",
-      "end": "2027-07-09",
-      "text": "OLE Week / Post Examination Activities"
-    },
-    {
-      "start": "2027-06-24",
       "end": "2027-07-16",
       "text": "F.4–5 Additional Cycles",
       "spanAll": true
+    },
+    {
+      "start": "2027-06-24",
+      "end": "2027-07-09",
+      "text": "OLE Week / Post Examination Activities"
     },
     {
       "start": "2027-06-25",
@@ -2112,13 +2142,13 @@ window.SCHOOL_DATA = {
     },
     {
       "start": "2027-07-06",
-      "end": "2027-07-06",
-      "text": "IB Result Release Day"
+      "end": "2027-07-12",
+      "text": "Hostel Application (New Students)"
     },
     {
       "start": "2027-07-06",
-      "end": "2027-07-12",
-      "text": "Hostel Application (New Students)"
+      "end": "2027-07-06",
+      "text": "IB Result Release Day"
     },
     {
       "start": "2027-07-09",
@@ -2154,41 +2184,6 @@ window.SCHOOL_DATA = {
       "start": "2027-08-27",
       "end": "2027-08-27",
       "text": "F.1 Orientation"
-    },
-    {
-      "start": "2026-11-02",
-      "end": "2026-11-02",
-      "text": "Buy Lunch"
-    },
-    {
-      "start": "2026-11-06",
-      "end": "2026-11-06",
-      "text": "Buy Lunch"
-    },
-    {
-      "start": "2026-11-13",
-      "end": "2026-11-13",
-      "text": "Buy Lunch"
-    },
-    {
-      "start": "2026-11-20",
-      "end": "2026-11-20",
-      "text": "Buy Lunch"
-    },
-    {
-      "start": "2026-11-23",
-      "end": "2026-11-23",
-      "text": "Buy Lunch"
-    },
-    {
-      "start": "2026-11-26",
-      "end": "2026-11-26",
-      "text": "Buy Lunch"
-    },
-    {
-      "start": "2026-11-27",
-      "end": "2026-11-27",
-      "text": "Buy Lunch"
     }
   ],
   "tagLabels": {
