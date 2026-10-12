@@ -1535,9 +1535,8 @@ function isNightObsDay(key) {
 function isAstronomy101Day(key) {
   return eventsFor(key).some(ev => /astronomy 101/i.test(ev.text || ""));
 }
-const BUY_LUNCH_DATES = new Set(["2026-11-02","2026-11-06","2026-11-13","2026-11-20","2026-11-23","2026-11-26","2026-11-27"]);
 function isBuyLunchDay(key) {
-  return BUY_LUNCH_DATES.has(key) || eventsFor(key).some(ev => /buy lunch/i.test(ev.text || ""));
+  return eventsFor(key).some(ev => /buy lunch/i.test(ev.text || ""));
 }
 const ASA_RECESS_T = (DATA.asa && DATA.asa.recess) || "15:25–15:45";
 const ASA_ACT_T = (DATA.asa && DATA.asa.activity) || "15:45–17:45";
