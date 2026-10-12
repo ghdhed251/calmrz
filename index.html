@@ -3107,11 +3107,15 @@ function renderWidget(size, key) {
     if (e.key === "Escape") closeSearch();
   });
 
-  function findMatch(q) {
+  let lastQuery = "";
+  let lastHits = [];
+  let lastIndex = -1;
+
+  function findAll(q) {
     const query = q.trim().toLowerCase();
-    if (!query) return null;
-    // Read events from the loaded calendar data (JSON or JS fallback)
+    if (!query) return [];
     const events = (window.__CAL && window.__CAL.events) || [];
+    const seen = new Set();
     const hits = [];
     for (const ev of events) {
       const text = (ev.text || "").toLowerCase();
@@ -3119,14 +3123,12 @@ function renderWidget(size, key) {
       const start = ev.start;
       const end = ev.end || start;
       if (!start) continue;
-      // Walk the range and pick the first day the event applies
       let d = start;
       while (d <= end) {
         if (typeof eventAppliesToDay !== "function" || eventAppliesToDay(ev, d)) {
-          hits.push(d);
+          if (!seen.has(d)) { seen.add(d); hits.push(d); }
           break;
         }
-        // next day
         const [y, m, day] = d.split("-").map(Number);
         const nd = new Date(y, m - 1, day + 1);
         d = nd.getFullYear() + "-" + String(nd.getMonth()+1).padStart(2,"0") + "-" + String(nd.getDate()).padStart(2,"0");
@@ -3134,27 +3136,42 @@ function renderWidget(size, key) {
       }
     }
     hits.sort();
-    return hits[0] || null;
+    return hits;
   }
 
   function doSearch() {
-    const q = input.value;
-    const key = findMatch(q);
-    if (!key) {
-      msg.textContent = q.trim() ? "No matching day found" : "";
+    const q = input.value.trim();
+    if (!q) { msg.textContent = ""; msg.classList.remove("err"); return; }
+    const query = q.toLowerCase();
+    // Same query again: advance to next match (loop)
+    if (query === lastQuery && lastHits.length) {
+      lastIndex = (lastIndex + 1) % lastHits.length;
+    } else {
+      lastQuery = query;
+      lastHits = findAll(q);
+      lastIndex = 0;
+    }
+    if (!lastHits.length) {
+      msg.textContent = "No matching day found";
       msg.classList.add("err");
+      lastQuery = "";
       return;
     }
-    msg.textContent = "Found " + key;
+    const key = lastHits[lastIndex];
+    msg.textContent = "Match " + (lastIndex + 1) + " of " + lastHits.length + " · " + key;
     msg.classList.remove("err");
-    // Switch to month view if in week view so the cell is visible
     if (app.classList.contains("view-tt")) {
       const calBtn = document.getElementById("viewCal");
       if (calBtn) calBtn.click();
     }
     setTimeout(() => {
       scrollDayToCenter(key, "smooth");
-      selectDay(key);
+      // Keep the detail panel open if this day is already selected
+      if (typeof selectedDayKey === "function" && selectedDayKey() === key) {
+        if (typeof openDay === "function") openDay(key);
+      } else {
+        selectDay(key);
+      }
     }, 120);
   }
 
@@ -3164,6 +3181,8 @@ function renderWidget(size, key) {
   input.addEventListener("input", () => {
     msg.textContent = "";
     msg.classList.remove("err");
+    lastQuery = "";
+    lastIndex = -1;
   });
 })();
 
